@@ -541,9 +541,10 @@ StTooltip StLabel {
 }
 
 .grouped-window-list-item-box .progress {
-    background-color: rgba(255,255,0,1);
+    background-color: rgba(0,157,255,0.4);
     box-shadow: none;
-    border: 1px solid rgba(255,255,0,1);
+    border: 1px solid lightgray;
+    border-radius: 2px;
     font-weight: bold;
     color: #000;
     text-shadow: 1px 1px 1px #00ff00;
