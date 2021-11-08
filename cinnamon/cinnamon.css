@@ -418,28 +418,19 @@ StTooltip StLabel {
 .window-list-item-box:checked,
 .window-list-item-box:focus  {
     color: #fff;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0);
-    background-gradient-end: rgba(255,255,255,0.33);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
+    background-color: red;
 }
 
 .window-list-item-box:active:hover,
 .window-list-item-box:checked:hover,
 .window-list-item-box:focus:hover {
     color: #fff;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.05);
-    background-gradient-end: rgba(255,255,255,0.33);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
+    background-color: red;
 }
 
 .window-list-item-box:hover  {
     color: #fff;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.33);
-    background-gradient-end: rgba(255,255,255,0);
-    box-shadow: inset 0 -1px 1px 0 rgba(255,255,255,0.33);
+    background-color: red;
 }
 
 .window-list-item-label {
@@ -498,9 +489,9 @@ StTooltip StLabel {
     padding: 0px;
 }
 .grouped-window-list-item-box:active {
-    color: #fff;
-    background-color: rgba(50,50,50,0.5);
-    border: none;
+    color: #ddd;
+    background-color: rgba(50,50,50,0.25);
+    border-bottom: 4px solid transparent;
 }
 
 .grouped-window-list-item-box:checked,
@@ -512,7 +503,7 @@ StTooltip StLabel {
 
 .grouped-window-list-item-box:hover {
     color: #fff;
-    background-color: rgba(50,50,50,0.5);
+    background-color: green;
 }
 .grouped-window-list-item-box:active:hover,
 .grouped-window-list-item-box:checked:hover,
@@ -552,11 +543,6 @@ StTooltip StLabel {
 }
 .grouped-window-list-thumbnail-menu .item-box:selected {
     color: white;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.2);
-    background-gradient-end: rgba(255,255,255,0.08);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
-    border-radius: 1px;
 }
 
 .grouped-window-list-thumbnail-menu .thumbnail {
@@ -665,11 +651,11 @@ StTooltip StLabel {
 #panel {
     color: #fff;
     background-color: rgba(0,0,0,0.72);
-    border: 1px solid rgba(0,0,0,0.21);
-    box-shadow: 0 0 3px 5px rgba(0,0,0,0.33);
-    border-top: 0;
+    border: 1px solid rgb(15,15,15);
+    border-top: 2px;
     border-left: 0;
     border-right: 0;
+    border-bottom: 0;
     font-size: 9pt;
     font-weight: bold;
     height: 2.2em;
@@ -685,18 +671,23 @@ StTooltip StLabel {
 #panelLeft:ltr, .panelLeft:ltr {
     padding-right: 4px;
 }
+
 #panelLeft:rtl, .panelLeft:rtl {
     padding-left: 4px;
 }
 
 #panelRight:ltr, .panelRight:ltr {
-    padding-left: 4px;
-   /* spacing: 0px;*/
+    padding-right: 0;
+    /*spacing: 4px;*/
 }
 
 #panelRight:rtl, .panelRight:rtl {
-    padding-right: 4px;
-    /*spacing: 0px;*/
+    padding-right: 0px;
+    /*spacing: 20px;*/
+}
+
+#panelRight:ltr *, .panelRight:ltr * {
+    spacing: 8px;
 }
 
 .panelLeft.vertical {
@@ -911,7 +902,7 @@ StTooltip StLabel {
 }
 
 .panel-menu {
-    -boxpointer-gap: 4px
+    -boxpointer-gap: 4px;
 }
 
 #panelUserMenu {
@@ -1455,11 +1446,8 @@ StTooltip StLabel {
 
 #notification {
     color: #fff;
-    font-size: 8.5pt;
-    border-radius: 10px 10px 10px 10px;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(85,85,85,0.8);
-    background-gradient-end: rgba(85,85,85,0.8);
+    font-size: 9pt;
+    background-color: rgba(0,0,0, 0.75);
     padding: 8px 8px 8px 8px;
     spacing-rows: 10px;
     spacing-columns: 10px;
@@ -2143,19 +2131,9 @@ StTooltip StLabel {
     padding: 0px;
 }
 .panel-launcher {
-    margin: 0px;
-    padding: 1px;border: 1px;
-    border-color: rgba(255,255,255,0);
-}
-
-.panel-launcher:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.33);
-    background-gradient-end: rgba(255,255,255,0);
-    box-shadow: inset 0 -1px 1px 0 rgba(255,255,255,0.33);
-    border-radius: 4px;
+    margin: 0;
+    padding: 1px;
     border: 1px;
-    border-color: rgba(255,255,255,0);
 }
 
 .panel-launcher-add-dialog-content-box {
@@ -2175,10 +2153,6 @@ StTooltip StLabel {
 
 .panel-launcher-add-dialog-entry {
     padding: 6px;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.15);
-    background-gradient-end: rgba(255,255,255,0.15);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
     color: #fff;
     font-size: 9pt;
     font-weight: bold;
@@ -2187,14 +2161,6 @@ StTooltip StLabel {
     selected-color: #000;
     width: 250px;
     transition-duration: 50;
-}
-
-.panel-launcher-add-dialog-entry:focus,
-.panel-launcher-add-dialog-entry:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.23);
-    background-gradient-end: rgba(255,255,255,0.33);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
 }
 
 .panel-launcher-add-dialog-entry:hover {
@@ -2211,9 +2177,17 @@ StTooltip StLabel {
 
 .applet-box {
     margin: 0px;
-    padding: 1px;
-    border: 1px solid rgba(255,255,255,0);
+    padding: 4px;
 }
+
+.applet-box * {
+    spacing: 8px;
+}
+
+.applet-box #panelCenter {
+    padding: 0 8px;
+}
+
 .applet-box.vertical {
     padding-left: 0px;
     padding-right: 0px;
@@ -2221,48 +2195,19 @@ StTooltip StLabel {
     padding-bottom: 3px;
 }
 
-.applet-box:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.33);
-    background-gradient-end: rgba(255,255,255,0);
-    box-shadow: inset 0 -1px 1px 0 rgba(255,255,255,0.33);
-    border-radius: 4px;
-    border: 1px solid rgba(255,255,255,0);
-}
-
-.applet-box:active,
-.applet-box:overview,
-.applet-box:focus {
-    color: white;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,0,0,0.0);
-    background-gradient-end: rgba(255,255,255,0.21);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
-    border-radius: 4px;
-    border: 1px;
-    border-color: rgba(255,255,255,0);
-}
-
-.applet-box:active:hover,
-.applet-box:checked:hover,
-.applet-box:focus:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,0,0,0.0);
-    background-gradient-end: rgba(255,255,255,0.31);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
-}
-
 .applet-label {
     padding-left: 4px;
     padding-right: 4px;
     font-weight: bold;
-    color: #ccc;
+    color: #ddd;
 }
 
-.applet-label:hover,
-.applet-box:hover > .applet-label {
+.applet-box:hover {
+    background-color: rgba(25,25,25,0.5);
+}
+
+.applet-box:hover * {
     color: #fff;
-    text-shadow: white 0px 0px 5px;
 }
 
 .applet-icon {
