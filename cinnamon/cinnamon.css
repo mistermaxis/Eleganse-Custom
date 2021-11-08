@@ -499,36 +499,26 @@ StTooltip StLabel {
 }
 .grouped-window-list-item-box:active {
     color: #fff;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0);
-    background-gradient-end: rgba(255,255,255,0.33);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
+    background-color: rgba(50,50,50,0.5);
+    border: none;
 }
 
 .grouped-window-list-item-box:checked,
 .grouped-window-list-item-box:focus {
     color: #fff;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0);
-    background-gradient-end: rgba(255,255,255,0.33);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
+    background-color: rgba(50,50,50,0.5);
+    border: solid rgba(0,157,255,0.6);
 }
 
 .grouped-window-list-item-box:hover {
     color: #fff;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.33);
-    background-gradient-end: rgba(255,255,255,0);
-    box-shadow: inset 0 -1px 1px 0 rgba(255,255,255,0.33);
+    background-color: rgba(50,50,50,0.5);
 }
 .grouped-window-list-item-box:active:hover,
 .grouped-window-list-item-box:checked:hover,
 .grouped-window-list-item-box:focus:hover {
     color: #fff;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.05);
-    background-gradient-end: rgba(255,255,255,0.33);
-    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.33);
+    background-color: rgba(50,50,50,0.5);
 }
 .grouped-window-list-item-demands-attention {
     color: white;
@@ -541,15 +531,17 @@ StTooltip StLabel {
 }
 
 .grouped-window-list-item-box .progress {
-    background-color: rgba(255,255,0,1);
+    background-color: rgba(0,157,255,0.4);
     box-shadow: none;
-    border: 1px solid rgba(255,255,0,1);
+    border: 1px solid lightgray;
+    border-radius: 2px;
     font-weight: bold;
     color: #000;
     text-shadow: 1px 1px 1px #00ff00;
 }
 
 .grouped-window-list-thumbnail-menu {
+    border: 0.05em solid rgba(50,50,50,0.6);
 }
 .grouped-window-list-thumbnail-menu .item-box {
     padding: 6px;
